@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        setTimeout(()=>{
+            document.body.style.backgroundColor='red';
+            setTimeout(() =>{
+                document.body.style.backgroundColor='blue';
+                setTimeout(()=>{
+                    document.body.style.backgroundColor='yellow';
+                    setTimeout(()=>{
+                        document.body.style.backgroundColor='green';
+                    })
+                },2000)
+            },2000)
+        },2000)
+
+        const str = "hello world";
+        hello(str);
+        function hello(aaa){
+            console.log(aaa)
+        }
+        // hello(str)
+
+        hi(str);
+        const hi =(bbb) =>{
+            console.log(bbb);
+        };
+    </script>
+</body>
+</html>

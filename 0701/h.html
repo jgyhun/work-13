@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       function backGround(color){
+        return new Promise((resolve,reject) =>{
+            setTimeout(()=>{
+                document.body.style.backgroundColor= color;
+                resolve("red");
+            },1000)
+        })
+       }
+       async function exec(){
+        await backGround("red");
+        await backGround("blue");
+        await backGround("yello");
+        await backGround("orange");
+        await backGround("green");
+        await backGround("purple");
+
+       }
+       exec();
+    </script>
+</body>
+</html>
