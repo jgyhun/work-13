@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3></h3>
+    <form action="/gForm" method="GET">
+        이름</label><input type="text"  name="name" id="name" required>
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" value="남자"/>남자
+            <input type="radio" name="gender" value="여자"/>여자
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>생년월일</legend>
+            <select name="year">
+                <% for(let i = 1970; i <= 2024; i++){ %>
+                    <option value="<%= i %>"><%= i %></option>
+                <% } %>
+            </select>년
+            <select name="month">
+                <% for(let j = 1; j <= 12; j++){ %>
+                    <option value="<%= j %>"><%= j %></option>
+                <% } %>
+            </select>월
+            <select name="day">
+                <% for(let y = 1; y <= 31; y++){ %>
+                    <option value="<%= y %>"><%= y %></option>
+                <% } %>
+            </select>일
+
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>관심사</legend>
+            <input type="checkbox" name="hobby" value="여행"/>여행
+            <input type="checkbox" name="hobby" value="패션"/>패션
+            <input type="checkbox" name="hobby" value="음식"/>음식
+        </fieldset>
+        <br />
+        <button type="submit">회원가입</button>
+    </form>
+</body>
+</html>
